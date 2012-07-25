@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails cat_fights: production" product="" version="" jdbc-version="" driver-version="" uuid="c8ecc1e7-1d09-450b-bdb2-cab5cde32dca">
+    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+    <jdbc-url>jdbc:postgresql://wstech.megiteam.pl:5435/pg_8225</jdbc-url>
+    <user-name>pg_8225a</user-name>
+    <user-password>dfe9df80df80df80dfc3</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/postgresql-driver-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/postgresql-9.1-901.jdbc4.jar</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails cat_fights: development" product="" version="" jdbc-version="" driver-version="" uuid="91b6c240-0e19-4ef6-bb0b-8e58d2d96d72">
+    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+    <jdbc-url>jdbc:postgresql:cat_fights_development</jdbc-url>
+    <user-name>wstech</user-name>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/postgresql-driver-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/postgresql-9.1-901.jdbc4.jar</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails cat_fights: test" product="" version="" jdbc-version="" driver-version="" uuid="103180da-832c-44db-bc41-2e832cae6ea3">
+    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+    <jdbc-url>jdbc:postgresql:cat_fights_test</jdbc-url>
+    <user-name>wstech</user-name>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/postgresql-driver-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/postgresql-9.1-901.jdbc4.jar</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>

@@ -1,0 +1,53 @@
+body {
+  background-color: gray;
+  font-family: Monaco, Arial;
+  color: black;
+}
+
+a {
+  color: black;
+  font-weight: 300;
+  font-size: 1.3em;
+  text-decoration: none;
+
+}
+
+a:hover {
+  color: green;
+}
+
+#page {
+  background-color: gray;
+  margin: auto;
+  height: 700px;
+  width:  800px;
+}
+
+#head {
+  background-color: Blue;
+  float: left;
+  height: 100px;
+  width:  300px;
+}
+
+#nav {
+  background-color: Red;
+  float: left;
+  height: 100px;
+  width:  500px;
+  text-align: right;
+}
+
+#content {
+  background-color: Orange;
+  float: left;
+  height: 550px;
+  width:  800px;
+}
+
+#footer {
+  background-color: Green;
+  float: left;
+  height: 50px;
+  width:  800px;
+}

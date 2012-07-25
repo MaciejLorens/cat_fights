@@ -1,0 +1,27 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: cat_fights_development
+  pool: 5
+  username: wstech
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: cat_fights_test
+  pool: 5
+  username: wstech
+  password:
+
+production:
+  adapter: postgresql
+  host: wstech.megiteam.pl
+  port: 5435
+  encoding: utf8
+  database: pg_8225
+  pool: 5
+  username: pg_8225a
+  password: "C***i"
+  schema_search_path: public
+  
