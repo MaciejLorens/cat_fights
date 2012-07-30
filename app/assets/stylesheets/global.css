@@ -1,26 +1,26 @@
-.top_points_table {
+.cats_table {
   margin: auto;
-  width: 700px;
-  border-width: 3px;
-  border-style: solid;
+  width: 750px;
 }
 
-.fight_table {
-  margin: auto;
-  width: 700px;
-  border-width: 3px;
-  border-style: solid;
+.cats_table {
+  font-size: 1.6em;
 }
 
-.image_row {
-  margin: auto;
+.cats_table th {
+  height: 30px;
+  color: white;
+  background-color: #1582AB;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
 }
 
-.image_cell {
-  border-width: 3px;
-  border-style: solid;
+.cats_table td {
+  width: 250px;
   text-align: center;
-  vertical-align: top;
+  border-collapse: collapse;
+  border-bottom: 2px dashed #1582AB;
 }
 
 .cat_image {
@@ -40,7 +40,7 @@ body {
 	background: #FFFFFF;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
-	color: #A19D9A;
+	color: black;;
 }
 
 
@@ -95,7 +95,7 @@ a:hover {
 #header {
 	width: 950px;
 	margin: 0 auto;
-	padding: 0px 0px 0px 30px;
+	padding: 0px 0px 0px 0px;
 }
 
 /* Logo */
@@ -158,7 +158,7 @@ a:hover {
 	text-decoration: none;
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: bold;
 	color: #FFFFFF;
 	border: none;
@@ -245,17 +245,15 @@ a:hover {
 }
 
 #footer p {
-	margin: 0;
-	padding-top: 20px;
 	line-height: normal;
+  padding-top: 10px;
 	font-size: 15px;
-	text-transform: uppercase;
-	text-align: center;
-	color: #FFFFFF;
+	color: white;
 }
 
-#footer a {
-	color: #FFFFFF;
+#footer h3 {
+  margin: 0px 0px 0px 0px;
+  color: white;
 }
 
 #footer table {

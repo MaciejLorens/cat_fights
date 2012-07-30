@@ -1,4 +1,6 @@
 class TopPictureTimePeriodController < ApplicationController
+  RESULTS_LIMIT = 10
+
   def index
     @time_periods_for_select_tag = [['daily', :daily], ['weekly', :weekly], ['monthly', :monthly]]
     @cats = []
@@ -17,11 +19,11 @@ class TopPictureTimePeriodController < ApplicationController
     cats_score_arr = []
     case time_period
       when 'daily' then
-        cats_score_arr = Vote.select('sum("value")').where('created_at > ?', DateTime.now - 1.day).group('"Cat_id"').order('sum("value") DESC').pluck('sum("value")')
+        cats_score_arr = Vote.select('sum("value")').where('created_at > ?', DateTime.now - 1.day).group('"Cat_id"').order('sum("value") DESC').limit(RESULTS_LIMIT).pluck('sum("value")')
       when 'weekly' then
-        cats_score_arr = Vote.select('sum("value")').where('created_at > ?', DateTime.now - 1.week).group('"Cat_id"').order('sum("value") DESC').pluck('sum("value")')
+        cats_score_arr = Vote.select('sum("value")').where('created_at > ?', DateTime.now - 1.week).group('"Cat_id"').order('sum("value") DESC').limit(RESULTS_LIMIT).pluck('sum("value")')
       when 'monthly' then
-        cats_score_arr = Vote.select('sum("value")').where('created_at > ?', DateTime.now - 1.month).group('"Cat_id"').order('sum("value") DESC').pluck('sum("value")')
+        cats_score_arr = Vote.select('sum("value")').where('created_at > ?', DateTime.now - 1.month).group('"Cat_id"').order('sum("value") DESC').limit(RESULTS_LIMIT).pluck('sum("value")')
     end
     cats_score_arr
   end
@@ -30,11 +32,11 @@ class TopPictureTimePeriodController < ApplicationController
     cats_id_arr = []
     case time_period
       when 'daily' then
-        cats_id_arr = Vote.select('"Cat_id"').where('created_at > ?', DateTime.now - 1.day).group('"Cat_id"').order('sum("value") DESC').pluck('"Cat_id"')
+        cats_id_arr = Vote.select('"Cat_id"').where('created_at > ?', DateTime.now - 1.day).group('"Cat_id"').order('sum("value") DESC').limit(RESULTS_LIMIT).pluck('"Cat_id"')
       when 'weekly' then
-        cats_id_arr = Vote.select('"Cat_id"').where('created_at > ?', DateTime.now - 1.week).group('"Cat_id"').order('sum("value") DESC').pluck('"Cat_id"')
+        cats_id_arr = Vote.select('"Cat_id"').where('created_at > ?', DateTime.now - 1.week).group('"Cat_id"').order('sum("value") DESC').limit(RESULTS_LIMIT).pluck('"Cat_id"')
       when 'monthly' then
-        cats_id_arr = Vote.select('"Cat_id"').where('created_at > ?', DateTime.now - 1.month).group('"Cat_id"').order('sum("value") DESC').pluck('"Cat_id"')
+        cats_id_arr = Vote.select('"Cat_id"').where('created_at > ?', DateTime.now - 1.month).group('"Cat_id"').order('sum("value") DESC').limit(RESULTS_LIMIT).pluck('"Cat_id"')
     end
     cats_id_arr
   end

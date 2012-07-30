@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Cat.destroy_all
+
+10.times do |index|
+  cat = Cat.new(:image => "cat#{index}.jpg", :total_points => 0)
+  cat.save
+end
+
+Vote.destroy_all
