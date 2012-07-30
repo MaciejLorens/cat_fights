@@ -11,6 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20120725174530) do
+
+  create_table "cats", :force => true do |t|
+    t.string   "image"
+    t.float    "total_points"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer  "Cat_id"
+    t.float    "value"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "votes", ["Cat_id"], :name => "index_votes_on_Cat_id"
 
 end

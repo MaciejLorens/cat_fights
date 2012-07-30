@@ -1,2 +1,22 @@
-<h1>Fights#index</h1>
-<p>Find me in app/views/fights/index.html.erb</p>
+<h1>Here you can vote for cooler cat!</h1>
+
+<div class="flash_notice">
+    <%= flash[:notice] %>
+</div>
+
+<div id="fight_table">
+    <table class="fight_table">
+      <tr class="cat_name_row">
+        <td><%= @cat1.image %></td>
+        <td><%= @cat2.image %></td>
+      </tr>
+      <tr class="image_row">
+        <td class="image_cell"><img class="cat_image" src="/images/cats/<%= @cat1.image %>" /></td>
+        <td class="image_cell"><img class="cat_image" src="/images/cats/<%= @cat2.image %>" /></td>
+      </tr>
+      <tr>
+        <td class="button_cell"><%= button_to "Vote for this Cat!", { :controller => "fights", :action => "vote", :id_win => @cat1.id, :id_lose => @cat2.id }, :class => 'vote_button' %></td>
+        <td class="button_cell"><%= button_to "Vote for this Cat!", { :controller => "fights", :action => "vote", :id_win => @cat2.id, :id_lose => @cat1.id }, :class => 'vote_button' %></td>
+      </tr>
+    </table>
+</div>

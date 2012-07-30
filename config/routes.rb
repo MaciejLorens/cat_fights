@@ -1,4 +1,6 @@
 CatFights::Application.routes.draw do
+  get "home/index"
+
   get "top_picture_time_period/index"
 
   get "top_picture_total/index"
@@ -56,6 +58,8 @@ CatFights::Application.routes.draw do
   # just remember to delete public/index.html.
 
   root :to => 'fights#index'
+
+  match "vote" => "fights#vote"
 
   # See how all your routes lay out with "rake routes"
 

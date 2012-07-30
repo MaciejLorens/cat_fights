@@ -1,2 +1,30 @@
-<h1>TopPictureTimePeriod#index</h1>
-<p>Find me in app/views/top_picture_time_period/index.html.erb</p>
+<script type="text/javascript">
+  $(document).ready(function() {
+        $('#time_period_select_tag').bind('change', function() { window.location.pathname = 'top_picture_time_period/index?time_period=' + $(this).val() });
+  });
+</script>
+
+<h1>Top Cats from time period</h1>
+
+<p>
+  Firstly choose the time period:
+  <%= select_tag "time_period_select_tag", options_for_select(@time_periods_for_select_tag), :include_blank => true, :id => 'time_period_select_tag' %>
+</p>
+
+
+<div id="top_points_table">
+  <table class="top_points_table">
+    <tr>
+      <td>Cat name</td>
+      <td>Cat image</td>
+      <td>Cat points from selected time period</td>
+    </tr>
+    <% @cats.each_with_index do |cat, index| %>
+        <tr>
+          <td><%= cat.image %></td>
+          <td><a href="/images/cats/"><img class="cat_image" src="/images/cats/<%= cat.image %>" /></a></td>
+          <td><%= @cats_score_arr[index] %></td>
+        </tr>
+    <% end %>
+  </table>
+</div>

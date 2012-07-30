@@ -1,2 +1,18 @@
-<h1>TopPictureTotal#index</h1>
-<p>Find me in app/views/top_picture_total/index.html.erb</p>
+<h1>Top Cats from all time</h1>
+
+<div id="top_points_table">
+  <table class="top_points_table">
+    <tr>
+      <td>Cat name</td>
+      <td>Cat image</td>
+      <td>Cat total points</td>
+    </tr>
+    <% @cats.each do |cat| %>
+        <tr>
+          <td><%= cat.image %></td>
+          <td><a href="/images/cats/<%= cat.image %>"><img class="cat_image" src="/images/cats/<%= cat.image %>" /></a></td>
+          <td><%= cat.total_points %></td>
+        </tr>
+    <% end %>
+  </table>
+</div>
