@@ -1,18 +1,18 @@
-<h1>Top Cats from all time</h1>
+<h1>Top 10 Cats from all time</h1>
 
 <div id="top_points_table">
-  <table class="cats_table">
-    <tr>
-      <th>Cat name</th>
-      <th>Cat image</th>
-      <th>Cat total points</th>
-    </tr>
-    <% @cats.each do |cat| %>
+    <table class="cats_table">
         <tr>
-          <td><%= cat.image %></td>
-          <td><a href="/images/cats/<%= cat.image %>"><img class="cat_image" src="/images/cats/<%= cat.image %>" /></a></td>
-          <td><%= cat.total_points %></td>
+            <th>Cat name</th>
+            <th>Cat image</th>
+            <th>Cat points</th>
         </tr>
-    <% end %>
-  </table>
+        <% @cats.each do |cat| %>
+            <tr>
+                <td><%= cat.image %></td>
+                <td><a href="/images/cats/<%= cat.image %>"><img class="tops_cat_image" src="/images/cats/<%= cat.image %>" /></a></td>
+                <td><%= cat.total_points %></td>
+            </tr>
+        <% end %>
+    </table>
 </div>

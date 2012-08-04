@@ -4,11 +4,11 @@ This is simple project witch alows user to vote on cats picture witch according 
 
 == Already done functionality:
 
-1) Cats fights view
-2) Top total picture view
-2) Top picture from time period view
+1) Cats fights
+2) Top total picture
+3) Top picture from time period
+4) Add new cat through the flickr.com service
 
 == Future improvements:
 
-1) Auto-import new cats picture from flickr.com
 2) User identification

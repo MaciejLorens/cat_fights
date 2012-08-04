@@ -1,0 +1,48 @@
+<script type="text/javascript">
+    $("document").ready(function(){
+        $("img").click(function(){
+            if ($(this).hasClass("selected_photo")) {
+                $(this).addClass("unselected_photo");
+                $(this).removeClass("selected_photo");
+            }
+            else {
+                $(this).addClass("selected_photo");
+                $(this).removeClass("unselected_photo");
+            }
+        });
+            $(".add_cats_button").click(function(){
+        }) ;
+    });
+
+    function my_function() {
+        var selected_photos = new Array();
+        $.each($(".selected_photo"), function(index, value){
+            selected_photos[index] = $(this).attr("src");
+        });
+        window.location.pathname = 'photos/create_cats?photos_paths=' + selected_photos;
+    }
+</script>
+
+
+<div class="photos_wrapper">
+
+    <div class="flash_notice">
+        <%= flash[:notice] %>
+    </div>
+
+    <h1>The lastest cat photos from flickr!</h1>
+
+    <p>Please choose these one witch show real, cute cat in order to give him chance to fight with other cats :)</p>
+
+    <% @photos.each do |photo| %>
+        <img class="unselected_photo" src="<%= photo.url %>">
+    <% end %>
+
+    <table class="add_and_paginate_table">
+        <tr>
+            <td><%= link_to_function "Add selected cats!", "my_function();" , :class => 'add_cats_link'%></td>
+            <td style="text-align: right;"><%= will_paginate @posts %></td>
+        </tr>
+    </table>
+
+</div>

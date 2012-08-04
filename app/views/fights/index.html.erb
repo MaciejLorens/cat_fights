@@ -11,8 +11,8 @@
         <th><%= @cat2.image %></th>
       </tr>
       <tr>
-        <td><img class="cat_image" src="/images/cats/<%= @cat1.image %>" /></td>
-        <td><img class="cat_image" src="/images/cats/<%= @cat2.image %>" /></td>
+        <td><img class="fight_cat_image" src="/images/cats/<%= @cat1.image %>" /></td>
+        <td><img class="fight_cat_image" src="/images/cats/<%= @cat2.image %>" /></td>
       </tr>
       <tr>
         <td class="button_cell"><%= button_to "Vote for this Cat!", { :controller => "fights", :action => "vote", :id_win => @cat1.id, :id_lose => @cat2.id }, :class => 'vote_button' %></td>

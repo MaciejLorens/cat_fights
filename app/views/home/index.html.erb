@@ -1,35 +1,50 @@
 -<div class="post">
-  <h1 class="title">Welcome on CatsFights page!</h1>
-  <p class="meta"><span class="date">Jul 29, 2012</span><span class="posted">Posted by <a href="#">Maciej Lorens</a></span></p>
-  <div style="clear: both;"></div>
-  <div class="entry">
-    <p>
-      On this page you can type the coolest cats on the world! ;-)
-    </p>
-    <p>
-      To start the fun, just click on the 'fights' tab and vote for cat witch is cooler
-    </p>
-    <p>
-      I wish you to have fun!
-    </p>
-  </div>
+    <h1 class="title">Cats photo from flickr added!</h1>
+    <p class="meta"><span class="date">Aug 04, 2012</span><span class="posted">Posted by <%= mail_to 'maciej.lorens@gmail.com', 'Maciej Lorens' %></span></p>
+    <div style="clear: both;"></div>
+    <div class="entry">
+        <p>
+            I am happy to inform you, that new functionality was added. </p>
+        <p>
+            Now in <%= link_to 'photos', :controller => 'photos' %> tab you have posibility to add new cats.
+            Try to add these photo witch include cat(s) in order to give him chance to win a battle for the cutest one title. <%= link_to 'Photos', :controller => 'photos' %>
+            tab contain users public image from the <%= link_to 'flick service', 'http://www.flickr.com' %>, so I am not responsible what theirs images shows.  Heve fun with that! :-).
+        </p>
+    </div>
 </div>
 
 -<div class="post">
-  <h1 class="title">Page relase!</h1>
-  <p class="meta"><span class="date">Jul 28, 2012</span><span class="posted">Posted by <a href="#">Maciej Lorens</a></span></p>
-  <div style="clear: both;"></div>
-  <div class="entry">
-    <p>
-      Im happy to inform you that CatsWars page have revealed!
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non magna tincidunt metus feugiat venenatis.
-      In hac habitasse platea dictumst. Proin ut sapien sit amet sem faucibus imperdiet sed cursus magna. Aenean vitae risus
-      non elit lobortis fringilla. Ut turpis enim, vehicula id euismod consectetur, dapibus a felis. In hac habitasse platea dictumst.
-      Donec placerat augue at risus consequat pellentesque. Nullam commodo, mi quis aliquet fermentum, diam mi vulputate elit,
-      vitae auctor nunc magna vel nisl. In lacus est, scelerisque sit amet luctus ac, fermentum ut lorem. Fusce volutpat venenatis
-      sem, quis bibendum libero consectetur sed.
-    </p>
-  </div>
+    <h1 class="title">Welcome on CatsFights page!</h1>
+    <p class="meta"><span class="date">Jul 29, 2012</span><span class="posted">Posted by <%= mail_to 'maciej.lorens@gmail.com', 'Maciej Lorens' %></span></p>
+    <div style="clear: both;"></div>
+    <div class="entry">
+        <p>
+            On this page you can type the coolest cats on the world! ;-)
+        </p>
+        <p>
+            To start the fun, just click on the 'fights' tab and vote for cat witch is cooler
+        </p>
+        <p>
+            I wish you to have fun!
+        </p>
+    </div>
+</div>
+
+-<div class="post">
+    <h1 class="title">Page relase!</h1>
+    <p class="meta"><span class="date">Jul 28, 2012</span><span class="posted">Posted by <%= mail_to 'maciej.lorens@gmail.com', 'Maciej Lorens' %></span></p>
+    <div style="clear: both;"></div>
+    <div class="entry">
+        <p>
+            Im happy to inform you that CatsWars page have revealed!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non magna tincidunt metus feugiat venenatis.
+            In hac habitasse platea dictumst. Proin ut sapien sit amet sem faucibus imperdiet sed cursus magna. Aenean vitae risus
+            non elit lobortis fringilla. Ut turpis enim, vehicula id euismod consectetur, dapibus a felis. In hac habitasse platea dictumst.
+            Donec placerat augue at risus consequat pellentesque. Nullam commodo, mi quis aliquet fermentum, diam mi vulputate elit,
+            vitae auctor nunc magna vel nisl. In lacus est, scelerisque sit amet luctus ac, fermentum ut lorem. Fusce volutpat venenatis
+            sem, quis bibendum libero consectetur sed.
+        </p>
+    </div>
 </div>
